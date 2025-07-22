@@ -100,8 +100,8 @@ h2::after {
 /* Header & Hero Section */
 .header {
     background-color: var(--primary-bg);
-    padding-bottom: 20px; /* Space below navbar */
-    border-bottom: 1px solid var(--border-color);
+    /* Remove padding-bottom here if it was present, as .hero has its own padding */
+    /* The border-bottom has been moved to the .navbar to ensure it sticks with the nav */
 }
 
 .navbar {
@@ -109,11 +109,11 @@ h2::after {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0; /* Padding for the navbar itself */
-    position: sticky; /* Make NAVBAR sticky */
+    position: sticky; /* THIS makes the navbar stick */
     top: 0;
     z-index: 1000; /* Ensure it stays on top */
-    background-color: var(--primary-bg); /* Ensure background when sticky */
-    border-bottom: 1px solid var(--border-color); /* Add border back for sticky navbar */
+    background-color: var(--primary-bg); /* Crucial: ensures navbar has a background when sticky */
+    border-bottom: 1px solid var(--border-color); /* This border will stick with the navbar */
 }
 
 .logo {
@@ -165,7 +165,8 @@ h2::after {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 40px 0; /* Adjusted padding as navbar is now separate */
+    padding: 40px 0; /* This padding defines the vertical size of your hero section below the navbar */
+    /* Ensure no 'position: sticky' or 'position: fixed' properties are overriding here */
 }
 
 .hero-content {
@@ -457,8 +458,8 @@ h2::after {
         flex-direction: column;
         padding-top: 15px; /* Adjust padding for column layout */
         padding-bottom: 10px;
-        position: static; /* Prevent sticky on very small screens if preferred, or keep sticky for menu always present */
-        /* If you want navbar to remain sticky even on mobile, remove 'position: static;' above */
+        /* If you want navbar to remain sticky even on mobile, keep 'position: sticky;' */
+        /* If you want it to scroll away on mobile, you could add 'position: static;' here, but sticky is usually better for nav */
     }
 
     .nav-links {
