@@ -1,9 +1,23 @@
-/* Header (Container for Navbar and Hero) */
+/* General Styling & Black Theme */
+:root {
+    --primary-bg: #000000; /* Deep Black */
+    --secondary-bg: #1a1a1a; /* Slightly lighter black for sections */
+    --text-color: #f0f0f0; /* Light grey for readability */
+    --accent-color: #00aaff; /* A vibrant blue for highlights */
+    --link-hover: #0077cc; /* Darker blue on hover */
+    --border-color: #333333; /* Dark grey for subtle borders */
+    --box-shadow-color: rgba(0, 0, 0, 0.5);
+    --heading-color: #ffffff; /* White for main headings */
+    --card-bg: #111111; /* Even darker for cards/items */
+}
+
+/* ... (rest of your general styles) ... */
+
+/* Header (Now only contains the Navbar) */
 .header {
     background-color: var(--primary-bg);
-    /* No padding-bottom here, as hero has its own padding. */
-    /* No explicit height, let content define it. */
-    /* IMPORTANT: Ensure no 'position: fixed;' or 'position: sticky;' here! */
+    /* No padding-bottom here, as the hero is separate. */
+    /* This border has been moved to the .navbar to ensure it sticks with the nav */
 }
 
 /* Navbar (The element that should stick) */
@@ -12,8 +26,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px; /* Uniform padding on all sides for the navbar */
-    position: sticky; /* Make NAVBAR sticky */
-    top: 0; /* Stick to the top of the viewport */
+    position: sticky; /* THIS makes the navbar stick */
+    top: 0;
     z-index: 1000; /* Ensure it stays on top */
     background-color: var(--primary-bg); /* Crucial: ensures navbar has a background when sticky */
     border-bottom: 1px solid var(--border-color); /* This border will stick with the navbar */
@@ -21,18 +35,25 @@
     box-sizing: border-box; /* Include padding in width calculation */
 }
 
-/* Hero Section (Should scroll normally) */
-.hero {
-    display: flex;
-    flex-direction: column;
+/* Hero Section (Now a standalone, scrollable section) */
+.hero-section { /* New class for the hero container */
+    background-color: var(--primary-bg); /* Ensure consistent background */
+    padding: 100px 20px; /* Adjust top/bottom padding to control its initial height */
+    display: flex; /* Use flexbox to center content */
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 80px 20px; /* Increased top/bottom padding for more space, left/right for responsiveness */
-    /* Ensure no 'position: sticky' or 'position: fixed' properties are overriding here */
+    min-height: 80vh; /* Make it take up a significant portion of the initial viewport height */
+    text-align: center; /* Center text content */
 }
 
-.hero h1 {
-    font-size: 4em; /* Original size */
+.hero-content { /* Original content styling, now inside .hero-section */
+    margin-bottom: 20px;
+    max-width: 800px; /* Constrain width for readability */
+    width: 100%;
+}
+
+.hero h1 { /* Renamed from .hero to .hero-content h1 or adjusted for new structure */
+    font-size: 4em;
     margin-bottom: 0.1em;
     animation: slideInFromLeft 0.8s ease-out forwards;
     opacity: 0;
@@ -40,7 +61,7 @@
 }
 
 .tagline {
-    font-size: 1.5em; /* Original size */
+    font-size: 1.5em;
     color: var(--accent-color);
     margin-bottom: 1.5em;
     animation: slideInFromRight 0.8s ease-out forwards;
@@ -48,23 +69,48 @@
     animation-delay: 0.6s;
 }
 
+.experience-caption {
+    margin-top: -10px;
+    font-style: italic;
+    color: var(--text-color);
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.9s;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    margin-top: 20px;
+    font-size: 1.8em;
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+    animation-delay: var(--delay);
+}
+
+/* ... (rest of your CSS including other sections, animations, and responsive design) ... */
+
 /* Responsive adjustments for hero section font sizes */
 @media (max-width: 1024px) {
+    .hero-section { padding: 80px 20px; min-height: 70vh; }
     .hero h1 { font-size: 3.5em; }
     .tagline { font-size: 1.4em; }
-    .hero { padding: 60px 20px; } /* Adjust padding for tablets */
 }
 
 @media (max-width: 768px) {
+    .hero-section { padding: 60px 20px; min-height: 60vh; }
     .hero h1 { font-size: 2.8em; }
     .tagline { font-size: 1.2em; }
-    .hero { padding: 50px 20px; } /* Adjust padding for medium screens */
-    .navbar { padding: 15px 20px; } /* Adjust nav padding for mobile */
+    .navbar { flex-direction: column; padding: 15px 20px; } /* Adjust nav padding for mobile */
+    .nav-links { margin-top: 15px; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .nav-links li { margin: 0 10px; }
 }
 
 @media (max-width: 480px) {
+    .hero-section { padding: 40px 15px; min-height: 50vh; }
     .hero h1 { font-size: 2.2em; }
     .tagline { font-size: 1em; }
-    .hero { padding: 30px 15px; } /* Adjust padding for small phones */
+    .experience-caption { font-size: 0.8em; }
+    .social-links { font-size: 1.4em; }
     .navbar { padding: 10px 15px; } /* Adjust nav padding for small phones */
+    .nav-links li { margin: 5px 8px; }
 }
