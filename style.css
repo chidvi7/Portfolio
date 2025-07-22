@@ -545,3 +545,7 @@ h2::after {
         grid-template-columns: 1fr; /* Single column for skills on very small screens */
     }
 }
+.section {
+  opacity: 1 !important;
+  transform: none !important;
+}
