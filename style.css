@@ -100,18 +100,20 @@ h2::after {
 /* Header & Hero Section */
 .header {
     background-color: var(--primary-bg);
-    padding: 20px 0;
+    padding-bottom: 20px; /* Space below navbar */
     border-bottom: 1px solid var(--border-color);
-    position: sticky; /* Make header sticky */
-    top: 0;
-    z-index: 1000; /* Ensure it stays on top */
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 20px;
+    padding: 20px 0; /* Padding for the navbar itself */
+    position: sticky; /* Make NAVBAR sticky */
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+    background-color: var(--primary-bg); /* Ensure background when sticky */
+    border-bottom: 1px solid var(--border-color); /* Add border back for sticky navbar */
 }
 
 .logo {
@@ -163,11 +165,11 @@ h2::after {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 80px 0 40px;
+    padding: 40px 0; /* Adjusted padding as navbar is now separate */
 }
 
 .hero-content {
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* Reduced margin */
 }
 
 .hero h1 {
@@ -443,24 +445,35 @@ h2::after {
 
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    h1 { font-size: 3em; }
+    .tagline { font-size: 1.4em; }
+    h2 { font-size: 2.2em; }
+    .section { padding: 70px 0; }
+}
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
+        padding-top: 15px; /* Adjust padding for column layout */
         padding-bottom: 10px;
+        position: static; /* Prevent sticky on very small screens if preferred, or keep sticky for menu always present */
+        /* If you want navbar to remain sticky even on mobile, remove 'position: static;' above */
     }
 
     .nav-links {
         margin-top: 15px;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 10px; /* Add gap for wrapped links */
     }
 
     .nav-links li {
-        margin: 5px 15px;
+        margin: 0 10px; /* Adjust margin for wrapped links */
     }
 
     .hero {
-        padding: 50px 0 30px;
+        padding: 40px 0 30px;
     }
 
     .hero h1 {
@@ -471,8 +484,12 @@ h2::after {
         font-size: 1.2em;
     }
 
+    .experience-caption {
+        font-size: 0.9em;
+    }
+
     .social-links {
-        font-size: 1.5em;
+        font-size: 1.6em;
     }
 
     h2 {
@@ -485,6 +502,12 @@ h2::after {
 
     .skills-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .job-entry, .education-entry, .project-entry, #certifications li {
+        padding: 20px;
+        margin-bottom: 20px;
     }
 }
 
@@ -497,15 +520,27 @@ h2::after {
         font-size: 1em;
     }
 
+    .experience-caption {
+        font-size: 0.8em;
+    }
+
     .social-links {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 
     .nav-links li {
-        margin: 5px 10px;
+        margin: 5px 8px; /* Further adjust for very small screens */
     }
 
     h2 {
         font-size: 1.8em;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Single column for skills on very small screens */
     }
 }
