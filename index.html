@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Mandavilli Chidvilas | SAP Consultant Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- anime.js CDN for advanced animations -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <div class="nav-logo"><a href="#">Mandavilli Chidvilas</a></div>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="nav-logo">Mandavilli Chidvilas</div>
       <ul class="nav-menu" id="nav-menu">
         <li><a href="#about" class="nav-link active">About</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -21,229 +19,150 @@
         <li><a href="#education" class="nav-link">Education</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-      <button class="nav-toggle" id="mobile-menu" aria-label="Toggle menu">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-      </button>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-        <span class="sun-icon">🌞</span>
-        <span class="moon-icon">🌚</span>
+      <button id="mobile-menu" class="nav-toggle" aria-label="Toggle Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </button>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="hero-container">
-      <div class="hero-content">
-        <h1 class="hero-title">Hi, I'm <span class="highlight">Mandavilli Chidvilas</span></h1>
-        <h2 class="hero-subtitle">SAP Fiori & UI5 Developer | RPA Consultant | Cybersecurity Enthusiast</h2>
-        <p class="hero-description">
-          I build automation and digital transformation in SAP. With real-world expertise in SAP Fiori/UI5 app development, RPA, BPA, and cybersecurity, I help enterprises automate, secure, and optimize business processes. Currently empowering workflows at Mindsprint, Bengaluru.
+  <!-- Hero / About -->
+  <section class="hero" id="about">
+    <div class="container hero-container">
+      <div class="hero-left">
+        <h1 class="hero-main">Hi, I'm <span class="hero-name">Mandavilli Chidvilas</span></h1>
+        <h2 class="hero-role">SAP Fiori &amp; UI5 Developer | RPA Consultant | Cybersecurity Enthusiast</h2>
+        <p class="hero-desc">
+          I build automation and digital transformation in SAP. With hands-on experience in SAP Fiori/UI5 app development, RPA, BPA, and cybersecurity, I help organizations achieve more efficient, secure business processes with elegant solutions. Currently automating workflows at Mindsprint, Bengaluru.
         </p>
-        <!-- Icon Action Buttons -->
-        <div class="action-buttons">
-          <a href="tel:+91XXXXXXXXXX" class="icon-btn" title="Call Me">
-            <svg viewBox="0 0 512 512"><path d="M391 351c-34 0-67-6-99-22-29-15-55-34-79-58-23-23-42-49-58-79-16-32-22-65-22-99 0-12 10-22 22-22h67c12 0 22 10 22 22v44c0 8-4 15-10 19l-27 17c16 28 37 53 62 74l16-26c4-6 11-10 19-10h44c12 0 22 10 22 22v67c0 12-10 22-22 22z" fill="currentColor"/></svg>
-          </a>
-          <a href="mailto:mandavilli.chidvilas.7@gmail.com" class="icon-btn" title="Email">
-            <svg viewBox="0 0 512 512"><path d="M464 80H48C21 80 0 101 0 128v256c0 27 21 48 48 48h416c27 0 48-21 48-48V128c0-27-21-48-48-48zm-6 32L256 275 54 112zM48 432c-9 0-16-7-16-16V149l169 149c17 15 41 15 58 0l169-149v267c0 9-7 16-16 16z" fill="currentColor"/></svg>
-          </a>
-          <a href="https://linkedin.com/in/chidvilasmandavilli" class="icon-btn" title="LinkedIn" target="_blank" rel="noopener">
-            <svg viewBox="0 0 512 512"><path d="M100 448H7V148h93v300zM54 108C24 108 0 84 0 54s24-54 54-54 54 24 54 54-24 54-54 54zm394 340h-92V297c0-36-13-61-47-61-26 0-41 18-47 36-2 5-3 12-3 19v157h-92V148h88v41c12-19 34-46 83-46 61 0 107 40 107 126v179z" fill="currentColor"/></svg>
-          </a>
-          <a href="Mandavilli_Chidvilas_Resume.pdf" class="icon-btn" title="Download Resume" download>
-            <svg viewBox="0 0 512 512"><path d="M376 160v-88c0-13-11-24-24-24H160c-13 0-24 11-24 24v88H80v272c0 13 11 24 24 24h304c13 0 24-11 24-24V160h-56zm-16 16v-88H152v88h208zM304 344v-80h-96v80h49.4c9.8 0 17.6 7.8 17.6 17.6V384h16V361.6c0-9.8 7.8-17.6 17.6-17.6h49.4z" fill="currentColor"/></svg>
-          </a>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-primary">Contact Me</a>
+          <a href="Mandavilli_Chidvilas_Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download CV</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="about">
-    <div class="container">
-      <div class="section-header"><h2 class="section-title">About Me</h2></div>
-      <div class="about-content">
-        <div class="about-text">
-          <p>
-            SAP developer and automation consultant passionate about building efficient, secure, and cutting-edge business solutions.<br>
-            Full-time experience: <b>1+ year</b> at Mindsprint (previously full-time SAP Fiori/UI5 & automation).
-          </p>
-          <p>
-            I thrive in cross-functional teams, turning requirements into business-ready software. Always learning, always optimizing. Proud to lead, build, and automate for real impact.
-          </p>
+      <div class="hero-right">
+        <div class="hero-image">
+          <svg height="100" width="100" viewBox="0 0 100 100">
+            <circle cx="50" cy="40" r="30" fill="#5a4ab1"/>
+            <ellipse cx="50" cy="80" rx="25" ry="16" fill="#402e73"/>
+            <circle cx="50" cy="36" r="13" fill="#2c2352"/>
+          </svg>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="skills">
+  <section class="section" id="skills">
     <div class="container">
-      <div class="section-header"><h2 class="section-title">Skills</h2></div>
+      <h2 class="section-title">Skills</h2>
       <div class="skills-grid">
-        <div class="skill-item"><div class="skill-header">
+        <div class="skill">
           <span class="skill-name">SAP Fiori UI5</span>
-          <span class="skill-percentage">90%</span>
+          <div class="progress-bar"><div style="width:90%"></div></div>
         </div>
-          <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
-        </div>
-        <div class="skill-item"><div class="skill-header">
+        <div class="skill">
           <span class="skill-name">SAP Build & BPA Automation</span>
-          <span class="skill-percentage">85%</span>
+          <div class="progress-bar"><div style="width:85%"></div></div>
         </div>
-          <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
-        </div>
-        <div class="skill-item"><div class="skill-header">
+        <div class="skill">
           <span class="skill-name">CDS Views</span>
-          <span class="skill-percentage">80%</span>
+          <div class="progress-bar"><div style="width:80%"></div></div>
         </div>
-          <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
-        </div>
-        <div class="skill-item"><div class="skill-header">
+        <div class="skill">
           <span class="skill-name">Cybersecurity</span>
-          <span class="skill-percentage">80%</span>
+          <div class="progress-bar"><div style="width:80%"></div></div>
         </div>
-          <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+        <div class="skill">
+          <span class="skill-name">SQL &amp; Database Mgmt</span>
+          <div class="progress-bar"><div style="width:85%"></div></div>
         </div>
-        <div class="skill-item"><div class="skill-header">
-          <span class="skill-name">SQL & Database Mgmt</span>
-          <span class="skill-percentage">85%</span>
-        </div>
-          <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
-        </div>
-        <div class="skill-item"><div class="skill-header">
+        <div class="skill">
           <span class="skill-name">Business Process Automation</span>
-          <span class="skill-percentage">88%</span>
+          <div class="progress-bar"><div style="width:88%"></div></div>
         </div>
-          <div class="skill-bar"><div class="skill-progress" data-width="88"></div></div>
-        </div>
-        <div class="skill-item"><div class="skill-header">
+        <div class="skill">
           <span class="skill-name">Identity Access Mgmt</span>
-          <span class="skill-percentage">75%</span>
-        </div>
-          <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
+          <div class="progress-bar"><div style="width:75%"></div></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="projects">
+  <section class="section" id="projects">
     <div class="container">
-      <div class="section-header"><h2 class="section-title">Projects</h2></div>
+      <h2 class="section-title">Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <div class="project-content">
-            <h3 class="project-title">OA Rise</h3>
-            <div class="project-description">
-              Activated 50+ standard SAP Fiori apps for user workflows and delivered a custom UI5 application with role-based dashboards, real-time validation, and smart automation for business-critical tasks, boosting agility and user satisfaction.
-            </div>
-            <div class="project-tech">
-              <span class="tech-tag">SAP Fiori</span>
-              <span class="tech-tag">UI5</span>
-              <span class="tech-tag">Automation</span>
-            </div>
-          </div>
+          <h3>OA Rise</h3>
+          <p>Activated 50+ standard SAP Fiori apps for user workflows and delivered a custom UI5 application with role-based dashboards, real-time validation, and smart automation for business-critical tasks, boosting agility and user satisfaction.</p>
         </div>
         <div class="project-card">
-          <div class="project-content">
-            <h3 class="project-title">SAP GROW Automation</h3>
-            <div class="project-description">
-              Led automation for SAP GROW: developed 10+ robust bots for Finance, MM & TMG teams in 3 months. Owned requirements, design & deployment for all bots automating invoices, reconciliation, master data, and compliance for scalable digital ops.
-            </div>
-            <div class="project-tech">
-              <span class="tech-tag">SAP</span>
-              <span class="tech-tag">RPA</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Finance</span>
-            </div>
-          </div>
+          <h3>SAP GROW Automation</h3>
+          <p>Led automation for SAP GROW: Developed 10+ robust bots for Finance, MM & TMG teams in 3 months. Owned requirements, design & deployment for all bots automating invoices, reconciliation, master data, and compliance for scalable digital ops.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="experience">
+  <section class="section" id="experience">
     <div class="container">
-      <div class="section-header"><h2 class="section-title">Experience</h2></div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="job-title">Junior Consultant</div>
-            <div class="company-name">Mindsprint</div>
-            <div class="job-location">Bengaluru, India</div>
-            <div class="job-dates">Jul 2024 – Present</div>
-            <ul class="job-responsibilities">
-              <li>Automated finance and procurement processes using SAP Build BPA, driving up to 30% process efficiency gain.</li>
-              <li>Developed modern SAP Fiori & custom UI5 apps for global users.</li>
-              <li>Led RPA projects from requirement gathering to deployment in cross-functional teams.</li>
-              <li>Enhanced SAP security and reliability through robust identity and data management.</li>
-            </ul>
+      <h2 class="section-title">Experience</h2>
+      <div class="exp-timeline">
+        <div class="exp-item">
+          <div>
+            <h3>Junior Consultant – Mindsprint</h3>
+            <span class="exp-location">Bengaluru, India</span> · <span class="exp-date">Jul 2024 – Present</span>
           </div>
+          <ul>
+            <li>Automated finance and procurement processes using SAP Build BPA, driving up to 30% process efficiency gain.</li>
+            <li>Developed modern SAP Fiori & custom UI5 apps for global users.</li>
+            <li>Led RPA projects from requirement gathering to deployment in cross-functional teams.</li>
+            <li>Enhanced SAP security and reliability through robust identity and data management.</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Education & Certifications -->
-  <section id="education">
+  <!-- Education -->
+  <section class="section" id="education">
     <div class="container">
-      <div class="section-header"><h2 class="section-title">Education & Certifications</h2></div>
-      <div class="education-item">
-        <div class="degree">B.Tech, Information Technology</div>
-        <div class="institution">SRM Institute of Science and Technology</div>
-        <div class="education-dates">2020 – 2024</div>
-        <div class="coursework">Relevant Courses: Software Engineering, Data Security, DBMS, Algorithms</div>
+      <h2 class="section-title">Education & Certifications</h2>
+      <div class="edu-block">
+        <h3>B.Tech, Information Technology</h3>
+        <span class="exp-location">SRM Institute of Science and Technology</span>
+        <span class="exp-date">2020 – 2024</span>
+        <p>Relevant Courses: Software Engineering, Data Security, DBMS, Algorithms</p>
       </div>
-      <div class="subsection-title" style="margin-top:2rem;">Certifications</div>
-      <div class="cert-grid">
-        <div class="cert-item">Certified SAP Application Associate – SAP S/4HANA (2023–2026)</div>
-        <div class="cert-item">Certified SAP Application Associate – SAP IBP (2022–2025)</div>
+      <div class="certs">
+        <strong>Certifications:</strong>
+        <ul>
+          <li>Certified SAP Application Associate – SAP S/4HANA (2023–2026)</li>
+          <li>Certified SAP Application Associate – SAP IBP (2022–2025)</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="contact">
+  <section class="section" id="contact">
     <div class="container">
-      <div class="section-header"><h2 class="section-title">Contact</h2></div>
-      <div class="contact-content">
-        <div class="contact-info">
-          <div class="contact-item">
-            <span class="contact-icon">📧</span>
-            <div class="contact-details">
-              <h3>Email</h3>
-              <p><a href="mailto:mandavilli.chidvilas.7@gmail.com">mandavilli.chidvilas.7@gmail.com</a></p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">📍</span>
-            <div class="contact-details">
-              <h3>Location</h3>
-              <p>Bengaluru, India</p>
-            </div>
-          </div>
-        </div>
-        <div class="social-links">
-          <h3>Connect:</h3>
-          <div class="social-icons">
-            <a class="social-link" href="tel:+91XXXXXXXXXX" title="Call"><svg viewBox="0 0 512 512" width="24"><path d="M391 351c-34 0-67-6-99-22-29-15-55-34-79-58-23-23-42-49-58-79-16-32-22-65-22-99 0-12 10-22 22-22h67c12 0 22 10 22 22v44c0 8-4 15-10 19l-27 17c16 28 37 53 62 74l16-26c4-6 11-10 19-10h44c12 0 22 10 22 22v67c0 12-10 22-22 22z" fill="currentColor"/></svg></a>
-            <a class="social-link" href="mailto:mandavilli.chidvilas.7@gmail.com" title="Email"><svg viewBox="0 0 512 512" width="24"><path d="M464 80H48C21 80 0 101 0 128v256c0 27 21 48 48 48h416c27 0 48-21 48-48V128c0-27-21-48-48-48zm-6 32L256 275 54 112zM48 432c-9 0-16-7-16-16V149l169 149c17 15 41 15 58 0l169-149v267c0 9-7 16-16 16z" fill="currentColor"/></svg></a>
-            <a class="social-link" href="https://linkedin.com/in/chidvilasmandavilli" title="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 512 512" width="24"><path d="M100 448H7V148h93v300zM54 108C24 108 0 84 0 54s24-54 54-54 54 24 54 54-24 54-54 54zm394 340h-92V297c0-36-13-61-47-61-26 0-41 18-47 36-2 5-3 12-3 19v157h-92V148h88v41c12-19 34-46 83-46 61 0 107 40 107 126v179z" fill="currentColor"/></svg></a>
-            <a class="social-link" href="Mandavilli_Chidvilas_Resume.pdf" title="Download Resume" download><svg viewBox="0 0 512 512" width="24"><path d="M376 160v-88c0-13-11-24-24-24H160c-13 0-24 11-24 24v88H80v272c0 13 11 24 24 24h304c13 0 24-11 24-24V160h-56zm-16 16v-88H152v88h208zM304 344v-80h-96v80h49.4c9.8 0 17.6 7.8 17.6 17.6V384h16V361.6c0-9.8 7.8-17.6 17.6-17.6h49.4z" fill="currentColor"/></svg></a>
-          </div>
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-block">
+        <span>Email: <a href="mailto:mandavilli.chidvilas.7@gmail.com">mandavilli.chidvilas.7@gmail.com</a></span><br>
+        <span>Location: Bengaluru, India</span>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:mandavilli.chidvilas.7@gmail.com">Email Me</a>
+          <a class="btn btn-outline" href="Mandavilli_Chidvilas_Resume.pdf" target="_blank" rel="noopener">Download CV</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    &copy; 2025 Mandavilli Chidvilas. Built with HTML, CSS, JS & anime.js.
-  </footer>
   <script src="app.js"></script>
 </body>
 </html>
